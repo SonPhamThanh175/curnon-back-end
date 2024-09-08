@@ -1,0 +1,36 @@
+# Exported from Render on 2024-09-08T21:49:03Z
+services:
+- type: web
+  name: curnon-back-end
+  runtime: node
+  repo: https://github.com/SonPhamThanh175/curnon-back-end
+  plan: free
+  envVars:
+  - key: ELASTICSEARCH_PASSWORD
+    sync: false
+  - key: ELASTICSEARCH_USERNAME
+    sync: false
+  - key: ELASTICSEARCH_NODE
+    sync: false
+  - key: CLIENT_SECRET_GG
+    sync: false
+  - key: CLIENT_ID_GG
+    sync: false
+  - key: CLIENT_SECRET_FB
+    sync: false
+  - key: CLIENT_ID_FB
+    sync: false
+  - key: ACCESS_TOKEN_SECRET
+    sync: false
+  - key: REFRESH_TOKEN_SECRET
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  - key: API_KEY_GOONG_MAP
+    sync: false
+  - key: MONGO_CONNECTION_STRING
+    sync: false
+  region: oregon
+  buildCommand: yarn --frozen-lockfile install; npm run build
+  startCommand: npm run start
+version: "1"
